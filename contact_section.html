@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Contact Section</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Group Carmona</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="skills_section.html">Skills Section</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact_section.html">Contact Section</a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-card">
+          <h2>Bautista, Ralph Rio H.</h2>
+          <p>Contact Information</p>
+          <h3>Email Address: <span>ralphriobautista@gmail.com</span></h3>
+          <h3>Github: <span>https://github.com/bmax360</span></h3>
+        </div>
+      
+        <div class="contact-card">
+          <h2>Birador, Alfred S.</h2>
+          <p>Contact Information</p>
+          <h3>Email Address: <span>biradoralfred@email.com</span></h3>
+          <h3>Github: <span>https://github.com/BiradorA</span></h3>
+        </div>
+      
+        <div class="contact-card">
+          <h2>Carmona, Jim Paul I.</h2>
+          <p>Contact Information</p>
+          <h3>Email Address: <span>jimcarmona8@gmail.com</span></h3>
+          <h3>Github: <span>https://github.com/Jpcarmona04</span></h3>
+        </div>
+
+        <div class="contact-card">
+            <h2>Maulawin, Heleina Zayra V.</h2>
+            <p>Contact Information</p>
+            <h3>Email Address: <span>maulawin.heleinazayra@gmail.com</span></h3>
+            <h3>Github: <span>https://github.com/hzyara</span></h3>
+          </div>
+
+          <div class="contact-card">
+            <h2>Gimang, Ary y.</h2>
+            <p>Contact Information</p>
+            <h3>Email Address: <span>arygimang4@gmail.com</span></h3>
+            <h3>Github: <span>https://github.com/aghrixo</span></h3>
+          </div>
+      </section>
+</body>
+<style>
+    *{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 70.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: top 0.3s ease; 
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 5rem 2rem;
+    justify-items: center;
+    background-color: black;
+    max-width: 1000px;
+    margin: 8rem auto 0 auto; /* 🔻 Adds space above (top margin) */
+}
+
+
+.contact-card {
+    background-color: #1a1a1a;
+    border: 2px solid #b74b4b;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 300px;       /* 🔸 Slightly smaller card */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(183, 75, 75, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(183, 75, 75, 0.8);
+}
+
+.contact-card h2 {
+    color: #b74b4b;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card span {
+    color: #b74b4b;
+}
+
+
+
+</style>
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            
+            header.style.top = "-100px";
+        } else {
+            
+            header.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>
+</html>

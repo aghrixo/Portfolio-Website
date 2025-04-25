@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Group Carmona</a>
+        <nav>
+            <a href="skills_section.html" >Skills Section</a>
+            <a href="projects.html" >Projects</a>
+            <a href="contact_section.html" >Contact Section</a>
+        </nav>
+    </header>
+    <section class="student-grid">
+        <!-- Student 1 -->
+    <div class="student-card">
+        <img src="img/Bautista.jpg" alt="Student 1">
+        <h2>Bautista, Ralph Rio H.</h2>
+        <p>Web Developer</p>
+        <h3>Projects:</h3>
+        <ul>
+          <li>Portfolio Website</li>
+          <li>Ecommerce Website</li>
+        </ul>
+        <a href="bautistaPage.html" class="btn">About Me</a>
+      </div>
+
+      <!-- Student 2 -->
+    <div class="student-card">
+        <img src="img/alfred.jpg" alt="Student 2">
+        <h2>Birador, Alfred S.</h2>
+        <p>Web Developer</p>
+        <h3>Projects:</h3>
+        <ul>
+          <li>Ecommerce Website</li>
+          <li>Preview Movie Database</li>
+        </ul>
+        <a href="biradorPage.html" class="btn">About Me</a>
+      </div>
+
+      <!-- Student 3 -->
+    <div class="student-card">
+        <img src="img/jim2.jpg" alt="Student 3">
+        <h2>Carmona, Jim Paul I.</h2>
+        <p>Web Developer</p>
+        <h3>Projects:</h3>
+        <ul>
+          <li>Colorized Wardrobe</li>
+          <li>Ecommerce Website</li>
+        </ul>
+        <a href="carmonaPage.html" class="btn">About Me</a>
+      </div>
+
+      <!-- Student 4 -->
+    <div class="student-card">
+        <img src="img/Maulawin.jpg" alt="Student 4">
+        <h2>Maulawin, Heleina Zayra V.</h2>
+        <p>Web Developer</p>
+        <h3>Projects:</h3>
+        <ul>
+          <li>Ecommerce Website</li>
+          <li>Preview Movie Database</li>
+        </ul>
+        <a href="maulawinPage.html" class="btn">About Me</a>
+      </div>
+
+      <!-- Student 5 -->
+    <div class="student-card">
+        <img src="img/ary.jpg" alt="Student 5">
+        <h2>Gimang, Ary Y.</h2>
+        <p>Web Developer</p>
+        <h3>Projects:</h3>
+        <ul>
+          <li>Colorized Wardrobe</li>
+          <li>Ecommerce Website</li>
+        </ul>
+        <a href="gimangPage.html" class="btn">About Me</a>
+      </div>
+    </section>
+</body>
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          header.style.top = "-100px";
+      } else {
+          // Scrolling up
+          header.style.top = "0";
+      }
+      lastScrollTop = scrollTop;
+  });
+</script>
+
+</html>
